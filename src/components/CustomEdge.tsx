@@ -98,6 +98,7 @@ export default function CustomEdge({
             style={{
               position: 'absolute',
               transform: `translate(-50%, 12px) translate(${labelX}px, ${labelY}px)`,
+              pointerEvents: 'all',
             }}
           >
             <QuestionPicker edgeId={id} onClose={() => setPickerOpen(false)} />
