@@ -62,6 +62,8 @@ export interface EdgeRecord {
   projectId: string;
   source: string;
   target: string;
+  sourceHandle: string | null;
+  targetHandle: string | null;
   style: EdgeStyleT;
   question: EdgeQuestion | null;
   updatedAt: number;

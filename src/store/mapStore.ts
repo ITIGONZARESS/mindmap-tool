@@ -112,6 +112,8 @@ function scheduleSave(get: () => MapState, set: (partial: Partial<MapState>) => 
         projectId,
         source: e.source,
         target: e.target,
+        sourceHandle: e.sourceHandle ?? null,
+        targetHandle: e.targetHandle ?? null,
         style: e.data!.style,
         question: e.data!.question,
         updatedAt: Date.now(),
@@ -166,6 +168,8 @@ export const useMapStore = create<MapState>((set, get) => ({
       type: 'question',
       source: e.source,
       target: e.target,
+      sourceHandle: e.sourceHandle,
+      targetHandle: e.targetHandle,
       data: { style: e.style, question: e.question },
     }));
     set({ project, nodes, edges, loading: false, saveStatus: 'saved' });
